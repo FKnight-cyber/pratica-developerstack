@@ -16,6 +16,7 @@ export async function getAnswerByQuestionId(id:number){
             id
         },include:{
             questions: {
+                where:{questionId:id},
                 select:{
                     answeredBy:true,
                     answer:true
